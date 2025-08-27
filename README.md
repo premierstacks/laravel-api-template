@@ -1,4 +1,4 @@
-# [Laravel API Template](https://github.com/premierstacks/laravel-app-template) by [Tomáš Chochola](https://github.com/tomchochola)
+# [Laravel API Template](https://github.com/premierstacks/laravel-api-template) by [Tomáš Chochola](https://github.com/tomchochola)
 
 The Laravel API Template by Premierstacks is the ultimate foundation for Laravel development, combining a secure, modular setup with advanced session handling, multi-language support, and pre-configured tools. Designed for performance and scalability, it offers extensive customization while maintaining high-quality standards for production readiness.
 
