@@ -1,15 +1,18 @@
 {
   "$schema": "https://getcomposer.org/schema.json",
-  "name": "premierstacks/laravel-app-template",
-  "description": "laravel app template",
+  "name": "premierstacks/laravel-api-template",
+  "description": "laravel api template",
   "type": "project",
   "keywords": [
     "tomchochola",
     "tomaschochola",
+    "Tomas Chochola",
+    "Tomáš Chochola",
     "premierstacks",
-    "laravel-app-template"
+    "Premierstacks",
+    "laravel-api-template"
   ],
-  "homepage": "https://github.com/premierstacks/laravel-app-template",
+  "homepage": "https://github.com/premierstacks/laravel-api-template",
   "readme": "./README.md",
   "license": "CC-BY-ND-4.0",
   "authors": [
@@ -22,9 +25,9 @@
   ],
   "support": {
     "email": "chocholatom1997@gmail.com",
-    "issues": "https://github.com/premierstacks/laravel-app-template/issues",
-    "source": "https://github.com/premierstacks/laravel-app-template.git",
-    "docs": "https://github.com/premierstacks/laravel-app-template"
+    "issues": "https://github.com/premierstacks/laravel-api-template/issues",
+    "source": "https://github.com/premierstacks/laravel-api-template.git",
+    "docs": "https://github.com/premierstacks/laravel-api-template"
   },
   "funding": [
     {
@@ -33,15 +36,16 @@
     }
   ],
   "require": {
-    "laravel/tinker": "^2.9",
-    "nunomaduro/collision": "^8.4",
-    "php": "~8.3.0",
-    "premierstacks/laravel-stack": "@dev"
+    "laravel/tinker": "^2.10.1",
+    "nunomaduro/collision": "^8.8.2",
+    "php": "~8.4.0",
+    "premierstacks/laravel-stack": "@dev",
+    "premierstacks/php-stack": "@dev"
   },
   "require-dev": {
-    "fakerphp/faker": "^1.23",
-    "mockery/mockery": "^1.6",
-    "phpunit/phpunit": "^11.3",
+    "fakerphp/faker": "^1.24.1",
+    "mockery/mockery": "^1.6.12",
+    "phpunit/phpunit": "^12.3.7",
     "premierstacks/php-cs-fixer-stack": "@dev",
     "premierstacks/phpstan-stack": "@dev"
   },
@@ -101,6 +105,19 @@
     "post-autoload-dump": [
       "rm -rf ./bootstrap/cache/*",
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
-    ]
+    ],
+    "composer:audit": "@composer audit",
+    "composer:install": "@composer install",
+    "composer:platform": "@composer check-platform-reqs",
+    "composer:update": "@composer update",
+    "composer:validate": "@composer validate --strict --no-check-all",
+    "dump:development": "@composer dump-autoload -o --dev --strict-psr",
+    "dump:production": "@composer dump-autoload -a --no-dev --strict-psr",
+    "fix:php-cs-fixer": "php-cs-fixer fix",
+    "lint:php-cs-fixer": "php-cs-fixer fix --dry-run --diff",
+    "stan:phpstan": "phpstan analyse",
+    "start:development": "@php -S 0.0.0.0:8000 -t ./public",
+    "test:coverage": "@php -S 0.0.0.0:8000 -t ./.phpunit.coverage/html",
+    "test:phpunit": "phpunit"
   }
 }

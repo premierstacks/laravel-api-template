@@ -92,7 +92,7 @@ return [
 
     'locales' => [
         ...\array_filter(
-            \str_getcsv(Filter::string($env->get('APP_LOCALES', 'en,cs,sk'))),
+            \str_getcsv(Filter::string($env->get('APP_LOCALES', 'en,cs,sk')), ',', '"', ''),
             static fn(mixed $value): bool => $value !== null,
         ),
     ],
@@ -118,7 +118,7 @@ return [
 
     'previous_keys' => [
         ...\array_filter(
-            \str_getcsv(Filter::string($env->get('APP_PREVIOUS_KEYS', ''))),
+            \str_getcsv(Filter::string($env->get('APP_PREVIOUS_KEYS', '')), ',', '"', ''),
             static fn(mixed $value): bool => $value !== null,
         ),
     ],

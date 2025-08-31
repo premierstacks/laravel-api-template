@@ -23,8 +23,8 @@ The Laravel API Template offers a robust set of pre-built features tailored for 
 With a fully integrated API, this template provides a suite of ready-to-use endpoints for essential functionalities, including authentication, session management, and verification workflows. Each endpoint is configured for vnd.api+json responses, ensuring consistency across all interactions, including structured error handling.
 
 ```
-# Returns an OpenAPI Swagger GUI for API exploration.
-GET /api/swagger
+# Returns an OpenAPI GUI for API exploration.
+GET /api/openapi
 
 # Retrieves the current authenticated user’s details.
 POST /api/authenticatable/retrieve
@@ -97,9 +97,9 @@ POST /api/verifications/complete
 
 All endpoints are configured to return responses in the vnd.api+json format, with uniform error handling across all request types, including validation and other exceptions. This setup provides frontend applications with structured, machine-readable responses, allowing for streamlined client-server communication.
 
-### OpenAPI/Swagger Specification
+### OpenAPI Specification
 
-An embedded Swagger interface is available, giving developers a comprehensive overview of all available API routes, request formats, and expected responses. This feature simplifies API exploration and integration by providing a user-friendly, interactive documentation tool.
+An embedded OpenAPI interface is available, giving developers a comprehensive overview of all available API routes, request formats, and expected responses. This feature simplifies API exploration and integration by providing a user-friendly, interactive documentation tool.
 
 ### Multilingual Support
 
@@ -239,7 +239,7 @@ make staging
 make production
 
 # start artisan dev server
-make start / make serve / make server
+make start
 
 # run automatic code fixers
 make fix
@@ -260,147 +260,3 @@ make clean
 **👨 GitHub Personal: [https://github.com/tomchochola](https://github.com/tomchochola)**<br />
 **🏢 GitHub Organization: [https://github.com/premierstacks](https://github.com/premierstacks)**<br />
 **💰 GitHub Sponsors: [https://github.com/sponsors/tomchochola](https://github.com/sponsors/tomchochola)**<br />
-
-## Tree
-
-The following is a breakdown of the folder and file structure within this repository. It provides an overview of how the code is organized and where to find key components.
-
-```bash
-.
-├── app
-│   ├── Models
-│   │   └── User.php
-│   └── Providers
-│       └── AppServiceProvider.php
-├── artisan
-├── AUTHORS.md
-├── bootstrap
-│   ├── app.php
-│   ├── cache
-│   └── providers.php
-├── composer.json
-├── config
-│   ├── app.php
-│   ├── auth.php
-│   ├── cache.php
-│   ├── cors.php
-│   ├── database.php
-│   ├── filesystems.php
-│   ├── hashing.php
-│   ├── logging.php
-│   ├── mail.php
-│   ├── queue.php
-│   ├── services.php
-│   ├── session.php
-│   └── view.php
-├── database
-│   ├── factories
-│   │   └── UserFactory.php
-│   ├── migrations
-│   │   ├── 0001_01_01_000000_create_framework_tables.php
-│   │   └── 0001_01_01_000001_create_auth_tables.php
-│   └── seeders
-│       ├── DatabaseSeeder.php
-│       └── UserSeeder.php
-├── docs
-│   └── application_documentation.md
-├── .editorconfig
-├── .env.development.example
-├── .env.local.example
-├── .env.production.example
-├── .env.staging.example
-├── .env.testing.example
-├── eslint.config.js
-├── .gitattributes
-├── .gitignore
-├── lang
-│   ├── cs
-│   │   ├── actions.php
-│   │   ├── auth.php
-│   │   ├── notifications.php
-│   │   ├── pagination.php
-│   │   ├── passwords.php
-│   │   ├── statuses.php
-│   │   └── validation.php
-│   ├── cs.json
-│   ├── en
-│   │   ├── actions.php
-│   │   ├── auth.php
-│   │   ├── notifications.php
-│   │   ├── pagination.php
-│   │   ├── passwords.php
-│   │   ├── statuses.php
-│   │   └── validation.php
-│   ├── en.json
-│   ├── sk
-│   │   ├── actions.php
-│   │   ├── auth.php
-│   │   ├── notifications.php
-│   │   ├── pagination.php
-│   │   ├── passwords.php
-│   │   ├── statuses.php
-│   │   └── validation.php
-│   └── sk.json
-├── LICENSE
-├── Makefile
-├── package.json
-├── .php-cs-fixer.php
-├── phpstan.neon
-├── phpunit.xml
-├── prettier.config.js
-├── .prettierignore
-├── provision
-│   ├── cron
-│   │   └── scheduler.sh
-│   └── supervisor
-│       └── queue_worker.sh
-├── public
-│   ├── apple-touch-icon.png
-│   ├── docs
-│   │   ├── httpie.sh
-│   │   └── openapi.json
-│   ├── favicon.ico
-│   ├── favicon-16x16.png
-│   ├── favicon-32x32.png
-│   ├── index.php
-│   └── robots.txt
-├── README.md
-├── resources
-│   └── views
-│       └── errors
-│           ├── 1xx.blade.php
-│           ├── 2xx.blade.php
-│           ├── 3xx.blade.php
-│           ├── 4xx.blade.php
-│           ├── 401.blade.php
-│           ├── 402.blade.php
-│           ├── 403.blade.php
-│           ├── 404.blade.php
-│           ├── 419.blade.php
-│           ├── 429.blade.php
-│           ├── 5xx.blade.php
-│           ├── 500.blade.php
-│           └── 503.blade.php
-├── routes
-│   ├── console.php
-│   └── http.php
-├── storage
-│   ├── app
-│   │   ├── private
-│   │   └── public
-│   ├── framework
-│   │   ├── cache
-│   │   │   └── data
-│   │   ├── sessions
-│   │   ├── testing
-│   │   └── views
-│   └── logs
-└── tests
-    ├── Feature
-    │   └── NotFoundControllerTest.php
-    ├── TestCase.php
-    └── Unit
-        └── ExampleTest.php
-
-39 directories, 96 files
-```

@@ -14,7 +14,7 @@
   failOnRisky="true"
   failOnWarning="true"
   requireCoverageMetadata="true"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
 >
   <testsuites>

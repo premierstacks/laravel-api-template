@@ -21,8 +21,18 @@
 # php-cs-fixer
 /.php-cs-fixer.cache
 
-# phpactor
-/.phpactor.json
+# svg
+*.svg
+
+# eslint
+*.tsx
+*.mts
+*.ts
+*.cts
+*.jsx
+*.mjs
+*.js
+*.cjs
 
 # vendor
 /assets/vendor
@@ -30,33 +40,14 @@
 /resources/vendor
 /static/vendor
 
-# typescript
-/tsconfig.tsbuildinfo
+# storage
+/public/storage
+/storage
 
-# compiled files
-/build
-/dist
-
-# laravel
+# env
 .env
-.env.backup
 .env.development
 .env.local
 .env.production
 .env.staging
 .env.testing
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-Homestead.json
-Homestead.yaml
-auth.json
-npm-debug.log
-yarn-error.log
-
-# svg
-*.svg
-
-# storage
-/storage

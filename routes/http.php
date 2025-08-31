@@ -30,7 +30,7 @@ use Premierstacks\LaravelStack\Http\Middleware\SmartTransactionMiddleware;
 use Premierstacks\LaravelStack\Http\Middleware\ThrottleFailExceptMiddleware;
 use Premierstacks\LaravelStack\Http\Middleware\ThrottlePassMiddleware;
 
-Resolve::router()->view('api/swagger', 'psls::swagger', [
+Resolve::router()->view('api/openapi', 'psls::openapi', [
     'url' => Resolve::urlGeneratorContract()->to('docs/openapi.json'),
 ]);
 
@@ -58,7 +58,7 @@ Resolve::routeRegistrar()->prefix('api')->middleware(['encrypted_cookies', 'api_
             'action' => 'credentials_update',
         ]);
         $router->post('update_credentials', [CredentialsUpdateController::class, 'handle']);
-        $router->get('show', [AuthenticatableShowController::class, 'handle']);
+        $router->get('current', [AuthenticatableShowController::class, 'handle']);
         $router->post('logout_current_device', [LogoutCurrentDeviceController::class, 'handle']);
         $router->post('logout_other_devices', [LogoutOtherDevicesController::class, 'handle']);
         $router->post('logout_all_devices', [LogoutAllDevicesController::class, 'handle']);

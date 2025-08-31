@@ -2,8 +2,8 @@
 
 ## Tech stack
 
-- PHP 8.3
-- Laravel 11
+- PHP 8.4
+- Laravel 12
 - Composer 2
 
 ## Software requirements
@@ -78,10 +78,10 @@
 
 ## Cookies
 
-| name                                                        | description        |
-| ----------------------------------------------------------- | ------------------ |
-| \_\_Host-session-${APP_NAME}-production-authorization-users | users bearer token |
-| \_\_Host-session-${APP_NAME}-production                     | session            |
+| name                                                           | description           |
+| -------------------------------------------------------------- | --------------------- |
+| \_\_Host-session-${APP_NAME}-${APP_ENV}-authorization-${guard} | ${guard} bearer token |
+| \_\_Host-session-${APP_NAME}-${APP_ENV}                        | session               |
 
 ## Cron
 

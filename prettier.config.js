@@ -1,3 +1,9 @@
-import { recommended } from '@premierstacks/prettier-stack';
+import { PrettierStack } from '@premierstacks/prettier-stack';
 
-export default recommended();
+// eslint-disable-next-line no-restricted-exports
+export default PrettierStack.create()
+  .base()
+  .pug()
+  .ruby()
+  .xml()
+  .build();
